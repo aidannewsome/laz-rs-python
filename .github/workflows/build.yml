@@ -126,12 +126,12 @@ jobs:
           {
             version: '3.14',
             PYO3_CROSS_LIB_DIR: '/opt/python/cp314-cp314/lib'
-          },
-          {
-            version: '3.14t',
-            PYO3_CROSS_LIB_DIR: '/opt/python/cp314-cp314t/lib'
           }
         ]
+        # free-threaded 3.14 natively on x86_64 only: the aarch64 cross-compiling image has no python3.14t
+        include:
+          - target: x86_64
+            python: { version: '3.14t' }
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
