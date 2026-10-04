@@ -1,6 +1,6 @@
 [project]
 name = "lazrs"
-version = "0.8.2"
+version = "0.8.2+44"  # 0.8.2 with laz-rs/laz-rs-python#44, for Maquette until it is released
 classifier = [
   "Intended Audience :: Developers",
   "Programming Language :: Python",
